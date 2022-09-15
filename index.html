@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Caritas map</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<h1>Caritas Lab<br><span>3F Caritas Map</span></h1>
+
+
+<br><br><br><br>
+<img src="3F.jpg" style="width:100%;">
+<br><br>
+
+<h2>⚠︎ 3階C階段下（6-1,6-2...）エリア、3階部室エリアは通行不可です。<br>（C階段は使用可）</h2>
+
+<br><br>
+
+<div class="select">
+    <form name="frmMain">
+
+<p>現在地に近いエリアを<br>教室の張り紙、マップから選択してください</p>
+
+    <select name="sct1" id="style1" >
+        <option value="" hidden>現在地を選択してください</option>
+        <option value="1">A階段エリア（赤）</option>
+        <option value="2">B階段エリア（黄色）</option>
+        <option value="3">C階段エリア（緑）</option>
+        <option value="4">D階段エリア（水色）</option>
+       <!-- <option value="5">その他</option> -->
+    </select>
+    </form>
+
+<input type="button" name="btnSubmit"
+value="決定" onclick="mySubmit();" id="in">
+
+</div>
+
+
+
+</form>
+
+<script>
+
+function mySubmit(){
+    var val1 = document.frmMain.sct1.value;
+    var myURL;
+
+
+
+    switch(val1){
+
+    case "1":
+    myURL = "3-A.html"
+    break;
+
+
+    case "2":
+    myURL = "3-B.html"
+    break;
+
+
+    case "3":
+    myURL = "3-C.html"
+    break;
+
+
+    case "4":
+    myURL = "3-D.html"
+    break;
+/*
+    case "":
+    myURL = "3-reigai.html"
+    break;
+*/
+
+
+    }
+    
+    location.href = myURL;
+    return 0;
+    }
+
+
+</script>
+
+
+</body>
+</html>
